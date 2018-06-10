@@ -21,6 +21,9 @@ HISTFILESIZE=0
 # Set vi mode.
 set -o vi
 
+# Create swapfile location for vim.
+mkdir -p ~/.vim/swapfiles/
+
 # Operations specific to this system.
 if [ -f ~/.bash_local ]; then
     . ~/.bash_local
