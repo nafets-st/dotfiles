@@ -17,8 +17,13 @@ set statusline +=%1*%<%P%*              "offset
 
 set viminfo=
 
-au FileType javascript mat ErrorMsg /\s\+\%#\@<!$\|\t\|\%>80v.\+/
+"au BufRead,BufNewFile *.ts set filetype=typescript
+"au BufRead,BufNewFile *.ts setfiletype typescript
+"au! Syntax newlang source $VIM/syntax/typescript.vim
+
 au FileType java       mat ErrorMsg /\s\+\%#\@<!$\|\t\|\%>100v.\+/
+au FileType javascript mat ErrorMsg /\s\+\%#\@<!$\|\t\|\%>80v.\+/
+au FileType typescript mat ErrorMsg /\s\+\%#\@<!$\|\t\|\%>80v.\+/
 
 set hlsearch
 syntax on
