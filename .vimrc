@@ -14,6 +14,8 @@ call vundle#end()
 filetype plugin on
 " Vundle end
 
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 set directory=$HOME/.vim/swapfiles//
 
 set laststatus=2
